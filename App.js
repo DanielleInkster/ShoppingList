@@ -5,10 +5,7 @@ import {View, Text, StyleSheet} from 'react-native'
 const App =()=>{
   return(
     <View style ={styles.container}>
-      <Header/>
-        <Text> 
-          Hello world!
-        </Text>  
+        <Header />
     </View>
 
   )
@@ -17,6 +14,7 @@ const App =()=>{
 const styles = StyleSheet.create({
   container:{
     flex: 1, 
+    paddingTop:60,
   }
 })
 
