@@ -1,12 +1,14 @@
 import React from 'react'
+import Header from './components/Header'
 import {View, Text, StyleSheet} from 'react-native'
 
 const App =()=>{
   return(
     <View style ={styles.container}>
-      <Text> 
-        Hello World! 
-      </Text>  
+      <Header/>
+        <Text> 
+          Hello world!
+        </Text>  
     </View>
 
   )
