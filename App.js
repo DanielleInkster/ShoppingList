@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Header from './components/Header'
-import {View, Text, StyleSheet} from 'react-native'
+import {View, FlatList, Text, StyleSheet} from 'react-native'
 import { v4 as uuidv4 } from 'uuid'
 
 const App =()=>{
@@ -15,6 +15,9 @@ const App =()=>{
   return(
     <View style ={styles.container}>
         <Header/>
+        <FlatList data={items} renderItem ={({item})=> (
+          <Text>{item.text}</Text>
+          )}/>
     </View>
 
   )
