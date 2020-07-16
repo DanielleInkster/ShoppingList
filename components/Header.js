@@ -1,11 +1,11 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, ImagePropTypes } from 'react-native'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <View style={styles.header}>
             <Text style={styles.text}>
-                Hello World!
+              {props.title}
             </Text>
         </View> 
     )
@@ -21,8 +21,6 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 23,
         textAlign:'center',
-      
-
     }
 })
 
