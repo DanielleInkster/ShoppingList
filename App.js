@@ -5,7 +5,7 @@ import {View, Text, StyleSheet} from 'react-native'
 const App =()=>{
   return(
     <View style ={styles.container}>
-        <Header title={'Shopping List'}/>
+        <Header/>
     </View>
 
   )
