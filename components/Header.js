@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, ImagePropTypes } from 'react-native'
+import { View, Text, StyleSheet} from 'react-native'
 
 const Header = (props) => {
     return (
