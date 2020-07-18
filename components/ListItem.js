@@ -1,5 +1,8 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import Icon from 'react-native-vector-icons/FontAwesome'
+
+Icon.loadFont()
 
 const ListItem = ({item}) => {
     return (
@@ -8,6 +11,7 @@ const ListItem = ({item}) => {
                 <Text style={styles.text}>
                     {item.text}
                 </Text> 
+                <Icon name="remove" size={20} color="firebrick"/>
             </View>
         </TouchableOpacity>
     )
