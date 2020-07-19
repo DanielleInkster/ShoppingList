@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Header from './components/Header'
 import ListItem from './components/ListItem'
 import AddItem from './components/AddItem'
-import {View, FlatList, Text, StyleSheet} from 'react-native'
+import {View, FlatList, Text, StyleSheet, Alert} from 'react-native'
 import { v4 as uuidv4 } from 'uuid'
 
 const App =()=>{
@@ -21,9 +21,13 @@ const App =()=>{
   }
 
   const addItem = (text) => {
-    setItems(prevItems => {
-      return [{id:uuidv4(), text},...prevItems]
-    });
+    if(!text){
+      Alert.alert('Please enter an item')
+    } else {
+      setItems(prevItems => {
+        return [{ id: uuidv4(), text }, ...prevItems]
+      });
+    }
   }
 
   return(
