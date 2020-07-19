@@ -22,7 +22,7 @@ const App =()=>{
 
   const addItem = (text) => {
     if(!text){
-      Alert.alert('Please enter an item')
+      Alert.alert('Error','Please enter an item')
     } else {
       setItems(prevItems => {
         return [{ id: uuidv4(), text }, ...prevItems]
