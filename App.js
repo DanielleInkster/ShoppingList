@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Header from './components/Header'
 import ListItem from './components/ListItem'
+import AddItem from './components/AddItem'
 import {View, FlatList, Text, StyleSheet} from 'react-native'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -22,6 +23,7 @@ const App =()=>{
   return(
     <View style ={styles.container}>
         <Header/>
+        <AddItem/>
         <FlatList data={items} renderItem ={({item})=> (
           <ListItem item={item} deleteItem = {deleteItem}s/>
           )}/>
