@@ -20,10 +20,16 @@ const App =()=>{
     });
   }
 
+  const addItem = (text) => {
+    setItems(prevItems => {
+      return [{id:uuidv4(), text},...prevItems]
+    });
+  }
+
   return(
     <View style ={styles.container}>
         <Header/>
-        <AddItem/>
+        <AddItem addItem={addItem}/>
         <FlatList data={items} renderItem ={({item})=> (
           <ListItem item={item} deleteItem = {deleteItem}s/>
           )}/>
